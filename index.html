@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Directory App new</title>
-    <link href="css/style.css" />
+    <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
     <div id="wrapper">
@@ -24,13 +24,14 @@
     
     <script type="text/template" id="person-template" >
         <span class="list-header">
-            <%= firstname %>
-            <%= lastname %>
-            (<%= type %>)
-        </span class='details'>
-        <div>
-            Mobile No. : <%= homephone %> <br/>
-            Email : <a href="mailto : <%= email %>"></a>
+            <%= person.firstname %>
+            <%= person.lastname %>
+            (<%= person.type %>)
+        </span>
+        <div class='details'>
+            Mobile No. :  <input value="<%= person.homephone %>" /><br/>
+            Email : <input value="<%= person.email %>" /> <br/>
+            Check <%= name %>
         </div>
     </script>
 
